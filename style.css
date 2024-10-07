@@ -1,0 +1,466 @@
+:root {
+  --primary: #4f709c;
+  --secondary: #aee2ff;
+  --purple: #1a0d2f;
+  --bg: #161524;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--bg);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Nav-bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 7%;
+  background: linear-gradient(var(--bg), rgba(26, 13, 47, 0));
+  /* border-bottom: 3px solid whitesmoke; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-family: "MedievalSharp", cursive;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+.navbar .navbar-logo span {
+  color: var(--secondary);
+}
+
+.navbar .navbar-menu a {
+  color: whitesmoke;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar .navbar-menu a:hover {
+  color: var(--secondary);
+  text-decoration: none;
+  transform: translateY(3px);
+}
+
+.navbar .navbar-extra a {
+  color: whitesmoke;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+#menu {
+  display: none;
+}
+
+/* Hero section */
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  background: linear-gradient(rgba(29, 16, 52, 0) 0%, rgba(29, 16, 52, 1) 100%);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to center the content horizontally */
+  background-image: url("img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: whitesmoke;
+}
+
+.hero .content h1 {
+  font-family: "MedievalSharp", cursive;
+  font-size: 4em;
+  text-shadow: 1px 1px 3px black;
+  line-height: 1;
+}
+
+.hero .content h1 span {
+  font-family: "MedievalSharp", cursive;
+  color: var(--secondary);
+}
+
+.hero .content h2 {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+.hero .content .play {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  background-color: var(--secondary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px black;
+  transition: transform 0.3s ease;
+}
+
+.hero .content .play:hover {
+  background-color: var(--primary);
+  color: whitesmoke;
+  transform: translateY(3px);
+}
+
+.hero video {
+  border-radius: 2rem;
+  box-shadow: 2px 2px 3px black;
+  width: 75%;
+  float: right;
+  margin-right: 5rem;
+  animation: moveUpDown 2s ease-in-out infinite;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.hero video:hover {
+  transform: scale(1.2);
+  width: 80%;
+  animation-play-state: paused;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(2vh);
+  }
+  50% {
+    transform: translateY(1vh);
+  }
+  100% {
+    transform: translateY(2vh);
+  }
+}
+
+.hero::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  background: linear-gradient(rgba(29, 16, 52, 0), rgb(22, 21, 36));
+}
+
+/* Review section */
+
+.review {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  min-height: 30vh;
+}
+
+.review-text {
+  font-size: 2.5rem;
+  font-family: "MedievalSharp", cursive;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border: 3px solid white;
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+}
+
+/* Feat section */
+.feat::before {
+  content: " "; /* Add some content here */
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  top: 0;
+  background: linear-gradient(rgb(22, 21, 36), rgba(29, 16, 52, 0));
+}
+.feat {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("img/feat-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.feat::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(29, 16, 52, 0) 0%,
+    rgba(22, 21, 36, 1) 100%
+  );
+  z-index: 1;
+}
+
+.feat .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.feat .image-container .image {
+  position: relative;
+  margin: 50px;
+  z-index: 2;
+}
+
+.feat .image-container .image img {
+  background-color: whitesmoke;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 3px black;
+  width: 35vw;
+  height: auto;
+  transition: transform 0.3s ease, padding 0.3s ease;
+}
+
+.feat .image-container .image:hover img {
+  padding: 0.5rem;
+  transform: scale(1.1);
+}
+
+.feat .image-container .image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.2rem;
+  transition: transform 0.3s ease, font-size 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translate(-50%, -20px);
+}
+
+.feat .image-container .image:hover .image-text {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+}
+
+/*download*/
+
+.download-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  height: 50vh; /* Adjust the height as needed */
+}
+
+.download-text {
+  font-size: 2.5rem;
+  font-family: "MedievalSharp", cursive;
+  height: auto;
+  text-align: center;
+}
+
+.download-buttons {
+  display: flex;
+}
+
+.download-button {
+  padding-top: 5vh;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.download-button:hover {
+  transform: scale(1.1);
+}
+
+/* Footer section */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+footer .social {
+  margin: 1rem 0;
+}
+
+footer .social a {
+  margin: 1rem;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+footer .social a:hover {
+  color: var(--secondary);
+}
+footer .link {
+  margin-bottom: 1.2rem;
+}
+
+footer .link a {
+  color: whitesmoke;
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+}
+footer .link a:hover {
+  color: var(--secondary);
+}
+
+/* Media Query */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 85%;
+  }
+  .feat .image-container .image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+  .navbar .navbar-logo {
+    font-size: 2.5rem;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-menu {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 0rem;
+    height: auto;
+    background-image: linear-gradient(to right, rgba(26, 13, 47,0), #1a0d2f);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    transition: right 0.8s ease, width 2s ease;
+  }
+  
+
+  .navbar .navbar-menu.active {
+    right: 0%;
+    transition: right 0.8s ease, width 2s ease;
+    width: 20rem;
+  }
+
+  .navbar .navbar-menu a {
+    color: whitesmoke;
+    display: block;
+    padding: 0.5rem;
+    font-size: 2rem;
+    margin: 2rem;
+    font-style: oblique;
+    text-align: right;
+  }
+
+  .navbar .navbar-menu a:hover {
+    color: var(--secondary);
+    text-decoration: none;
+    transform: translateY(3px);
+  }
+
+  .hero {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+  }
+  .hero video {
+    width: 85%;
+    float: none;
+    margin-right: 0;
+    display: block;
+    margin: 0 auto;
+  }
+  .hero .content .play {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .download-container {
+    height: 30vh; /* Adjust the height as needed */
+  }
+
+  .download-button {
+    padding-top: 4vh;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  .button-image {
+    width: 15vw;
+    height: auto;
+  }
+
+  .feat .image-container .image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

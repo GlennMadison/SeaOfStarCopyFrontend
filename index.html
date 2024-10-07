@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sea of FTars</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">Sea of<span> FTars</span></a>
+
+      <div class="navbar-menu">
+        <a href="index.html">Home</a>
+        <a href="character.html">Characters</a>
+        <a href="fanart.html">Fan art</a>
+        <a href="login.html">Account</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="login.html" id="download"><i data-feather="download"></i></a>
+        <a href="login.html" id="user"><i data-feather="user"></i></a>
+
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Sea of <span>FTars</span></h1>
+        <h2>Step into a realm of wonder and adventure.</h2>
+        <br />
+        <a href="login.html" class="play">Play now</a>
+      </main>
+
+      <div class="video-container">
+        <video src="img/trailer.mp4" autoplay loop muted></video>
+      </div>
+    </section>
+
+    <section class="review" id="review">
+      <div class="review-container">
+        <div class="review-text">
+          <p id="quote">
+            "Fantasy meets pixels in a captivating and addictive gameplay
+            experience"
+          </p>
+          <p class="author">- Gamesbeat</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feat" id="feat">
+      <div class="image-container">
+        <div class="image">
+          <img src="img/Features/Combat-4.png" alt="Image 1" />
+          <div class="image-text">Engaging Turn-Based Combat</div>
+        </div>
+        <div class="image">
+          <img src="img/Features/Story-3.png" alt="Image 2" />
+          <div class="image-text">A story rich adventure</div>
+        </div>
+        <div class="image">
+          <img src="img/Features/Traversal-5.png" alt="Image 3" />
+          <div class="image-text">Unshackled Traversal</div>
+        </div>
+        <div class="image">
+          <img src="img/Features/World-5.png" alt="Image 4" />
+          <div class="image-text">A world you can touch</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div class="download-container">
+        <div class="download-text">
+          <h2>Download now</h2>
+          <p>Available on PC, Switch, and PlayStation</p>
+        </div>
+        <div class="download-buttons">
+          <a href="#" class="download-button">
+            <img
+              src="img/download/steam.png"
+              alt="Steam Logo"
+              class="button-image"
+            />
+          </a>
+          <a href="#" class="download-button">
+            <img
+              src="img/download/switch.png"
+              alt="Switch Logo"
+              class="button-image"
+            />
+          </a>
+          <a href="#" class="download-button">
+            <img
+              src="img/download/epic.png"
+              alt="Epic Logo"
+              class="button-image"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social">
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="youtube"></i></a>
+      </div>
+
+      <div class="link">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">efteStudio</a>
+      </div>
+
+      <div class="credit">
+        <p>© 2021 Sea of FTars. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

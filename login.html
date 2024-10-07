@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sea of FTars</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">Sea of<span> FTars</span></a>
+
+      <div class="navbar-menu">
+        <a href="index.html">Home</a>
+        <a href="character.html">Characters</a>
+        <a href="fanart.html">Fan art</a>
+        <a href="login.html">Account</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="login.html" id="download"><i data-feather="download"></i></a>
+        <a href="login.html" id="user"><i data-feather="user"></i></a>
+
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <div class="center">
+      <h1>Register</h1>
+      <form>
+        <div class="txt_field">
+          <input type="text" id="username"  />
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="email" id="email"  />
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password"  />
+          <label>Password</label>
+        </div>
+        <div class="radio_field">
+          <select name="nationality" id="nationality">
+            <option value="empty">Choose one</option>
+            <option value="indonesia">Indonesian</option>
+            <option value="singapore">Singaporean</option>
+            <option value="united_states">American</option>
+            <option value="united_kingdom">British</option>
+            <option value="canada">Canadian</option>
+            <option value="australia">Australian</option>
+            <option value="germany">German</option>
+            <option value="france">French</option>
+            <option value="japan">Japanese</option>
+          </select>
+        </div>
+        <div class="checkbox_field">
+          <input type="checkbox" id="agree"  />
+          <label>Agree with terms and conditions.</label>
+        </div>
+        <p id="error_msg" class="error_msg"></p>
+        <input type="submit" value="Create Account" onclick="validateForm(event)" />
+      </form>
+    </div>
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
